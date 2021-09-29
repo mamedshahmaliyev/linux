@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  pma-network:
+  external-network1:
+    name: external-network1
+    external: true
+
+services:
+
+  pma:
+    image: phpmyadmin
+    container_name: pma
+    restart: always
+    ports:
+      - 8081:80
+    env_file: .env
+    networks:
+      - pma_network
+      - external-network1
+    restart: unless-stopped
