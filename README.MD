@@ -4,6 +4,8 @@ This repo contains different linux script snippets.
 
 https://unix.stackexchange.com/questions/14312/how-to-restrict-an-ssh-user-to-only-allow-ssh-tunneling
 
+Put the following into your /etc/ssh/sshd_config
+
 ```
 Match User restricted_user
   # AllowTcpForwarding yes # this allows all ports
