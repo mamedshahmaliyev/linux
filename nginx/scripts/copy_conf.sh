@@ -6,5 +6,5 @@ cd $SCRIPT_DIR
 cd ..
 
 #rm -Rf /etc/nginx/conf.d/*
-\cp -r conf.d/* /etc/nginx/conf.d/
+\cp -r conf.d /etc/nginx
 \cp -r snippets /etc/nginx
