@@ -1,17 +1,24 @@
 #!/bin/bash
 
 echo "Installing snapd..."
-sudo yum install epel-release -y
-sudo yum install snapd -y
-sudo systemctl enable --now snapd.socket
+yum install epel-release -y
+sleep 1
+yum install snapd -y
+sleep 1
+systemctl enable --now snapd.socket
+sleep 1
 sudo ln -s /var/lib/snapd/snap /snap
+sleep 1
 
-sudo snap install core
-sudo snap refresh core
+snap install core
+sleep 1
+snap refresh core
 sleep 5
-sudo snap install core
-sudo snap refresh core
+snap install core
+sleep 1
+snap refresh core
 
 echo "Installing certbot..."
-sudo snap install --classic certbot
-sudo ln -s /snap/bin/certbot /usr/bin/certbot
+snap install --classic certbot
+sleep 1
+ln -s /snap/bin/certbot /usr/bin/certbot
