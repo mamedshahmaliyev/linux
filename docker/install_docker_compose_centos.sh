@@ -1,18 +1,25 @@
 #!/bin/bash
 
 echo "Installing docker..."
-sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install -y yum-utils
+sleep 5
 
-sudo yum install  -y docker-ce docker-ce-cli containerd.io
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sleep 10
 
-sudo systemctl start docker
-sudo systemctl enable docker
+yum install  -y docker-ce docker-ce-cli containerd.io
+
+sleep 5
+
+systemctl start docker
+sleep 1
+systemctl enable docker
 
 
 echo "Installing docker-compose..."
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sleep 10
 
-sudo chmod +x /usr/local/bin/docker-compose
-
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+sleep 5
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
