@@ -2,6 +2,7 @@ version: "3"
 
 networks:
   pma-network:
+    name: pma-network
   external-network1:
     name: external-network1
     external: true
