@@ -12,7 +12,6 @@ services:
   pma:
     image: phpmyadmin
     container_name: pma
-    restart: always
     ports:
       - 8081:80
     env_file: .env
