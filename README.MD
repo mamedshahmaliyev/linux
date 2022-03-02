@@ -14,3 +14,7 @@ Match User restricted_user
   AllowAgentForwarding no
   ForceCommand /bin/false
   ```
+  
+  Get Largest folders in linux:
+  
+  `du -h * | sort -h`
