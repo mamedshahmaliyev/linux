@@ -18,3 +18,8 @@ Match User restricted_user
   Get Largest folders in linux:
   
   `du -h * | sort -h`
+  
+  
+# time zone baku
+
+`mv /etc/localtime /etc/localtime.bak && ln -s /usr/share/zoneinfo/Asia/Baku /etc/localtime`
