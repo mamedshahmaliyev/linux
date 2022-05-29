@@ -23,3 +23,12 @@ Match User restricted_user
 # time zone baku
 
 `mv /etc/localtime /etc/localtime.bak && ln -s /usr/share/zoneinfo/Asia/Baku /etc/localtime`
+
+# install xubuntu and xrdb 22.04
+
+sudo apt update
+sudo apt install xfce4
+sudo apt install xubuntu-desktop
+sudo apt install xrdp
+sudo systemctl enable --now xrdp
+sudo ufw allow from any to any port 3389 proto tcp
