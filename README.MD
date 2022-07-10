@@ -36,7 +36,8 @@ sudo ufw allow from any to any port 3389 proto tcp
 
 # top largest tables mysql
 ```
-SELECT CONCAT(table_schema, '.', table_name),
+SELECT table_schema,
+       table_name,
        CONCAT(ROUND(table_rows / 1000000, 2), 'M')                                    'rows',
        CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), 'G')                    'DATA',
        CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), 'G')                   'idx',
