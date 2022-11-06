@@ -9,3 +9,6 @@
 1. scripts/copy_conf.sh, nginx -t, service nginx restart
 2. scripts/letsencrypt-cert.sh domain_name, to generate letsencrypt cert
 3. scripts/self-signed-cert.sh domain_name, to generate self signed cert
+
+## SELINUX
+https://www.nginx.com/blog/using-nginx-plus-with-selinux/
