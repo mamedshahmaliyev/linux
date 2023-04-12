@@ -51,10 +51,10 @@ LIMIT  10;
 # self signed wildcard certificate
 ```
 subject="
-C=AZ
-ST=AZ
-O=Total Beverage Group
-organizationalUnitName=Total Beverage Group (TBG)
+C=US
+ST=US
+O=Home
+organizationalUnitName=Home
 commonName=*
 "
 
