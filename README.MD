@@ -51,12 +51,16 @@ LIMIT  10;
 # self signed wildcard certificate
 ```
 subject="
-O=Org
+C=AZ
+ST=AZ
+O=Total Beverage Group
+organizationalUnitName=Total Beverage Group (TBG)
 commonName=*
 "
 
 openssl genrsa -out "self_signed_wildcard.key" 2048
 openssl req -new -subj "$(echo -n "$subject" | tr "\n" "/")" -key "self_signed_wildcard.key" -out "self_signed_wildcard.csr"
 openssl x509 -req -days 9990 -in "self_signed_wildcard.csr" -signkey "self_signed_wildcard.key" -out "self_signed_wildcard.crt"
-rm "self_signed_wildcard.csr"
+rm -rf "self_signed_wildcard.csr"
+
 ```
