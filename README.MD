@@ -64,3 +64,30 @@ openssl x509 -req -days 9990 -in "self_signed_wildcard.csr" -signkey "self_signe
 rm -rf "self_signed_wildcard.csr"
 
 ```
+
+
+
+# pyenv multiple python
+```
+brew install pyenv
+brew install openssl readline sqlite3 xz zlib
+brew install libxml2
+brew install libxslt
+brew link libxml2 --force
+brew link libxslt --force
+brew install openssl
+pyenv install --list | grep 3.8
+pyenv install 3.8.16
+pyenv local 3.8.16
+eval "$(pyenv init -)"
+python --version
+```
+
+
+
+
+
+
+
+
+
