@@ -83,6 +83,13 @@ eval "$(pyenv init -)"
 python --version
 ```
 
+# ffmpeg
+
+## Bulk Video quality lowering in folder
+```
+for f in *.mp4; do ffmpeg -i "${f}"  -vcodec libx264 -crf 33 "../vc/${f%%.*}.mp4"; done
+```
+
 
 
 
