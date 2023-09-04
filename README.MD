@@ -87,7 +87,7 @@ python --version
 
 ## Bulk Video quality lowering in folder
 ```
-for f in *.mp4; do ffmpeg -i "${f}"  -vcodec libx264 -crf 33 "../vc/${f%%.*}.mp4"; done
+for f in *.mp4; do ffmpeg -i "${f}"  -vcodec libx264 -crf 33 "../low_quality/${f%%.*}.mp4"; done
 ```
 
 
