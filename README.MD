@@ -90,6 +90,13 @@ python --version
 for f in *.mp4; do ffmpeg -i "${f}"  -vcodec libx264 -crf 33 "../low_quality/${f%%.*}.mp4"; done
 ```
 
+## mac format usb/sd card with block size 4096
+```
+diskutil list
+diskutil unmountDisk /dev/disk5
+sudo newfs_msdos -F 32 -c 8 -v NEW_NAME /dev/disk5
+```
+
 
 
 
