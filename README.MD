@@ -77,8 +77,8 @@ brew link libxml2 --force
 brew link libxslt --force
 brew install openssl
 pyenv install --list | grep 3.8
-pyenv install 3.8.16
-pyenv local 3.8.16
+pyenv install 3.10.12
+pyenv local 3.10.12
 eval "$(pyenv init -)"
 python --version
 ```
