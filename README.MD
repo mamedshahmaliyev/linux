@@ -97,6 +97,11 @@ diskutil unmountDisk /dev/disk5
 sudo newfs_msdos -F 32 -c 8 -v NEW_NAME /dev/disk5
 ```
 
+## find largest files:
+```
+sudo find / -type f -exec du -h {} + 2>/dev/null | sort -rh | head -n 10
+```
+
 
 
 
