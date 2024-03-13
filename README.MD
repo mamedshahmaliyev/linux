@@ -113,6 +113,9 @@ You can also use blkid to attach labels to your partitions and then mount via la
 
 After you change the partitions and adjust /etc/fstab you should run the update-grub - available on Debian/Ubuntu script or grub-mkconfig -o /boot/grub/grub.cfg to generate a new config file and then reinstall grub into the first hdd that you bot from. grub-install --recheck /dev/sda
 
+https://forums.centos.org/viewtopic.php?t=75043
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
 Of course do not forget that when copiying mount a new / or /boot partition on /mnt and after copying all of the files mount them as / and /boot chroot and only then run update of the grub if you want things to be done correctly.
 ```
 
