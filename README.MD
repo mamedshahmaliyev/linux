@@ -103,6 +103,20 @@ sudo find / -type f -exec du -h {} + 2>/dev/null | sort -rh | head -n 10
 ```
 
 
+## move boot partition:
+```
+https://unix.stackexchange.com/questions/385696/can-i-move-boot-linux-partition-to-another-drive-or-partition-and-just-boot-from
+in mac install xquartz
+If you are moving the files to new partition then don't forget to use cp -p while copying to preserve permissions. adjust then your /etc/fstab to the new UUID's of partitions that you will use. You can get the partition uuid by running blkid /dev/sdXn where X is name of the drive and n number of partition.
+
+You can also use blkid to attach labels to your partitions and then mount via labels which is much easier read man blkid to learn more.
+
+After you change the partitions and adjust /etc/fstab you should run the update-grub - available on Debian/Ubuntu script or grub-mkconfig -o /boot/grub/grub.cfg to generate a new config file and then reinstall grub into the first hdd that you bot from. grub-install --recheck /dev/sda
+
+Of course do not forget that when copiying mount a new / or /boot partition on /mnt and after copying all of the files mount them as / and /boot chroot and only then run update of the grub if you want things to be done correctly.
+```
+
+
 
 
 
