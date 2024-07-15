@@ -49,6 +49,9 @@ LIMIT  10;
 ```
 
 # self signed wildcard certificate
+
+docker run -it -v ./ssl:/ssl --rm alpine/openssl req -new -newkey rsa:4096 -days 10000 -nodes -x509 -subj "/C=US/ST=US/O=Home/OU=IT/CN=*" -keyout /ssl/self.key -out /ssl/self.crt
+
 ```
 subject="
 C=US
